@@ -20,7 +20,7 @@ public class ChatSocket extends TextWebSocketHandler implements WebSocketConfigu
 
     @Override
     protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
-        System.out.println("new message!");
+        session.sendMessage(new TextMessage("Pong"));
     }
 
     @Override
